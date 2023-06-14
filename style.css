@@ -1,0 +1,123 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: sans-serif;
+}
+
+.shopify-logo{
+    width: 200px;
+}
+.like-buttons{
+    display: flex;
+}
+
+.like-buttons a{
+    width: 40px;
+    color: #888;
+    border: 1px solid #888;
+    border-radius: 1px;
+
+}
+.like-buttons a:hover{
+    color:#d9480f;
+    transition: box-shadow .3s;
+    box-shadow:2px 2px 4px #bbb ;
+}
+.like-buttons a:last-child{
+    border-left: none;
+}
+.contacts{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+.nav-logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+.contact-numbers p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.categories{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+.categories svg{
+    width: 40px;
+}
+.search-container{
+    background-color: #e5e1e6;
+    padding: 20px 40px;
+    display: flex;
+    gap: 50px;
+}
+input[type="search"] {
+ border: none;
+ outline: none;
+ width: 40%;
+ font-size: 16px;
+ padding: 10px 20px;
+ width: 90%;
+}
+input[type="search"]::placeholder{
+    font-style: italic;
+    font-size: 14px;
+
+
+}
+.search-bar{
+    display: flex;
+    flex:3;
+    align-items: center;
+    position: relative;
+
+}
+.search-icon{
+    width: 25px;
+    position: absolute;
+    right: 12%;
+}
+.nav-icons{
+    display: flex;
+    gap:50px;
+    align-items: center;
+}
+.cart svg{
+    fill: #A8A9AD;
+}
+
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #222;
+}
+.nav-icon svg{
+    width: 40px;
+}
+.cart{
+    position: relative;
+}
+.cart p{
+    position: absolute;
+    top: -7px;
+    right:-3px;
+    font-size: 15px;;
+    color: #A8A9AD;
+    display: grid;
+    place-items: center;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}

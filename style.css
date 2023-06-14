@@ -1,0 +1,122 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+}
+.shopify-logo {
+  width: 200px;
+}
+.like-buttons {
+  display: flex;
+}
+.like-buttons a {
+  width: 40px;
+  color: #888;
+  border: 1px solid #888;
+  border-radius: 1px;
+}
+.like-buttons a:last-child {
+  border-left: none;
+}
+.contacts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+.contact-numbers p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.like-buttons a:hover {
+  color: #d9480f;
+  transition: box-shadow 0.3s;
+  box-shadow: 2px 2px 4px #bbb;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.categories svg {
+  width: 40px;
+  padding-right: 15px;
+}
+.search-container {
+  background-color: #e5e1e6;
+  /* height: 70px; */
+  padding: 20px 40px;
+  display: flex;
+  gap: 50px;
+}
+input[type="search"] {
+  border: none;
+  outline: none;
+  width: 40%;
+  padding: 15px 25px;
+  font-size: 16px;
+  width: 90%;
+}
+input[type="search"]::placeholder {
+  font-style: Italic;
+  font-size: 14px;
+}
+.search-icon {
+  width: 25px;
+  position: absolute;
+  right: 12%;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  position: relative;
+}
+.nav-icons {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.nav-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+}
+.nav-icon svg {
+  width: 40px;
+}
+.cart {
+  position: relative;
+}
+.cart svg {
+  fill: #a8a9ad;
+}
+.cart p {
+  top: -7px;
+  right: -3px;
+
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background-color: red;
+  height: 25px;
+  width: 25px;
+  color: #a8a9ad;
+  border: 2px solid #e5e1e6;
+  border-radius: 50%;
+  font-size: 15px;
+}
+.navigation-number {
+  text-decoration: none;
+  color: #333;
+}

@@ -1,123 +1,285 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-html{
-    font-family: sans-serif;
+html {
+  font-family: sans-serif;
+}
+body {
+  overflow-x: hidden;
 }
 
-.shopify-logo{
-    width: 200px;
+.shopify-logo {
+  width: 200px;
 }
-.like-buttons{
+.like-buttons {
+  display: flex;
+}
+
+.like-buttons a {
+  width: 40px;
+  color: #888;
+  border: 1px solid #888;
+  border-radius: 1px;
+}
+.like-buttons a:hover {
+  color: #d9480f;
+  transition: box-shadow 0.3s;
+  box-shadow: 2px 2px 4px #bbb;
+}
+.like-buttons a:last-child {
+  border-left: none;
+}
+.contacts {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+.contact-numbers p {
+  font-weight: bold;
+  font-size: 20px;
+}
+.categories {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.categories svg {
+  width: 40px;
+}
+.search-container {
+  background-color: #e5e1e6;
+  padding: 20px 40px;
+  display: flex;
+  gap: 50px;
+}
+input[type="search"] {
+  border: none;
+  outline: none;
+  width: 40%;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 90%;
+}
+input[type="search"]::placeholder {
+  font-style: italic;
+  font-size: 14px;
+}
+.search-bar {
+  display: flex;
+  flex: 3;
+  align-items: center;
+  position: relative;
+}
+.search-icon {
+  width: 25px;
+  position: absolute;
+  right: 12%;
+}
+.nav-icons {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+.cart svg {
+  fill: #a8a9ad;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #222;
+}
+.nav-icon svg {
+  width: 40px;
+}
+.cart {
+  position: relative;
+}
+.cart p {
+  position: absolute;
+  top: -7px;
+  right: -3px;
+  font-size: 15px;
+  color: #a8a9ad;
+  display: grid;
+  place-items: center;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  border: 2px solid #e5e1e6;
+  width: 25px;
+  height: 25px;
+}
+.navigation-number {
+  color: #333;
+  text-decoration: none;
+}
+.slideshow {
+  display: flex;
+  margin: 20px;
+  overflow-x: scroll;
+}
+.slideshow::-webkit-scrollbar {
+  display: none;
+}
+.slideshow-section {
+  overflow: hidden;
+}
+/* .slideshow img{
+    width: 100vw;
+
+} */
+.hero-image {
+  min-width: 100vw;
+  display: grid;
+  place-items: center;
+  height: 40%;
+  /* background-color:red; */
+  /* transform: translateX(-200%); */
+}
+.hero-image img {
+  width: 50%;
+}
+.image-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 10px 0;
+}
+.image-dot {
+  width: 20px;
+  height: 20px;
+  background-color: #888;
+  border-radius: 50%;
+}
+
+.image-dot:active {
+  background-color: #444;
+}
+.products {
+  margin-top: 3%;
+  padding: 50px;
+}
+.products h2 {
+  font-size: 30px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.featured-categories {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-top: 2%;
+}
+.featured-category:link,
+.featured-category:visited {
+    position: relative;
+    color: #a4a4a4;
+    font-size: 18px;
+    text-decoration: none;
+}
+.featured-category:hover,
+.featured-category:active{
+    color: #1a1a1a;
+    /* border-bottom: 2px solid #000; */
+    text-decoration: underline;
+    padding-bottom: 2px;
+    transition: all .1s;
+    text-underline-offset: 6px;
+}
+.products-category{
+    margin-top: 40px;
+}
+.product{
+    width: 250px;
+    height: 350px;
+    border: 1px solid rgba(0,0,0, 0.08);
+    box-shadow: 1px 1px 4px  rgba(0,0,0, 0.08) ;
+    padding:10px 20px;
+    margin-top: 20px;
+}
+.product:hover{
+    border: 1.2px solid rgba(0,0,0, .2);
+    box-shadow: 1px 1px 8px  rgba(0,0,0, .08) ;
+    transition: all .2s;
+
+}
+.product-description p{
+font-size: 14px;
+letter-spacing: .5px;
+line-height: 1;
+margin-bottom: 8px;
+}
+.category-products{
     display: flex;
-}
-
-.like-buttons a{
-    width: 40px;
-    color: #888;
-    border: 1px solid #888;
-    border-radius: 1px;
-
-}
-.like-buttons a:hover{
-    color:#d9480f;
-    transition: box-shadow .3s;
-    box-shadow:2px 2px 4px #bbb ;
-}
-.like-buttons a:last-child{
-    border-left: none;
-}
-.contacts{
-    display: flex;
+    overflow-x: scroll;
     gap: 10px;
-    align-items: center;
-
 }
-.nav-logo{
+.category-products::-webkit-scrollbar{
+    display: none;
+}
+.product-price{
+    /* text-align: center; */
+    font-weight: bold;
+    color: red;
+    margin-top: 12px;
+}
+
+.shop-with-us{
+    padding: 20px 20px;
+    margin-top: 20px;
+}
+.shop-with-us h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.shop-with-us p{
+    margin-top: 10px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+.footer{
     display: flex;
     justify-content: space-between;
     padding: 20px 20px;
-}
-.contact-numbers p{
-    font-weight: bold;
-    font-size: 20px;
-}
-.categories{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-top: 90px;
+    background-color: #666;
 
 }
-.categories svg{
-    width: 40px;
+.footer div ul{
+    list-style: none;
 }
-.search-container{
-    background-color: #e5e1e6;
-    padding: 20px 40px;
-    display: flex;
-    gap: 50px;
-}
-input[type="search"] {
- border: none;
- outline: none;
- width: 40%;
- font-size: 16px;
- padding: 10px 20px;
- width: 90%;
-}
-input[type="search"]::placeholder{
-    font-style: italic;
-    font-size: 14px;
-
-
-}
-.search-bar{
-    display: flex;
-    flex:3;
-    align-items: center;
-    position: relative;
-
-}
-.search-icon{
-    width: 25px;
-    position: absolute;
-    right: 12%;
-}
-.nav-icons{
-    display: flex;
-    gap:50px;
-    align-items: center;
-}
-.cart svg{
-    fill: #A8A9AD;
-}
-
-
-.nav-icon{
-    display: flex;
-    align-items: center;
+.footer div ul li a{
+    font-size: 15px;
+    color:#fff;
     text-decoration: none;
-    color: #222;
+    font-weight: normal;
 }
-.nav-icon svg{
-    width: 40px;
+.footer div ul li{
+    margin: 10px 0;
 }
-.cart{
-    position: relative;
+.footer div h2{
+color:#fff
 }
-.cart p{
-    position: absolute;
-    top: -7px;
-    right:-3px;
-    font-size: 15px;;
-    color: #A8A9AD;
-    display: grid;
-    place-items: center;
-    background-color: red;
+.footer-social-links{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.footer-social-links ion-icon{
+    font-size: 30px;
     color: #fff;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
 }
+.footer-social-links p{
+    color: #fff;
+}
+
